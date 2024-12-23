@@ -21,3 +21,14 @@ def purpose_keyboard():
     rows = [first_row, second_row]
     markup = ReplyKeyboardMarkup(keyboard=rows, resize_keyboard=True)
     return markup
+
+
+def category_keyboard():
+    button_1 = KeyboardButton(text="Супермаркет")
+    button_2 = KeyboardButton(text="Ресторан")
+    button_3 = KeyboardButton(text="Отмена")
+    first_row = [button_1, button_2]
+    second_row = [button_3]
+    rows = [first_row, second_row]
+    markup = ReplyKeyboardMarkup(keyboard=rows, resize_keyboard=True)
+    return markup

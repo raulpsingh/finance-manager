@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from src.application.interfaces.manager_repository import ManagerRepository
 from src.domain.entities.transaction import Transaction
 from src.domain.value_objects.category import Category
@@ -20,5 +21,5 @@ class AddTransactionUseCase:
             raise ValueError("Неверная сумма")
         transaction = Transaction(transaction_id=transaction_id, amount=float(amount), purpose=purpose,
                                   category=category, timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-                                  # type: ignore
+        # type: ignore
         self.repository.add_transaction(transaction)
